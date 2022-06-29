@@ -1,5 +1,6 @@
 package com.kyeonghoon.lecture01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -16,13 +17,10 @@ class MainActivity : AppCompatActivity() {
         image1.setOnClickListener{
 
             Toast.makeText(this,"1번 클릭완료",Toast.LENGTH_LONG).show()
-            
+            //2. 화면이 클릭되면, 다음 화면으로 넘어가서, 사진을 크게 보여줌!
+            var Intent = Intent(this,Image1Activity::class.java)
+            startActivity(Intent)
         }
-
-
-        //2. 화면이 클릭되면, 다음 화면으로 넘어가서, 사진을 크게 보여줌!
-
-
 
     }
 }
